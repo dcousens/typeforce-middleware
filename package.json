@@ -1,0 +1,57 @@
+{
+  "name": "typeforce-middleware",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Daniel Cousens",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dcousens/typeforce-middleware.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dcousens/typeforce-middleware/issues"
+  },
+  "homepage": "https://github.com/dcousens/typeforce-middleware",
+  "keywords": [
+    "express",
+    "middleware",
+    "typeforce",
+    "types",
+    "typechecking",
+    "type",
+    "exceptions",
+    "force"
+  ],
+  "scripts": {
+    "coverage": "mocha --require blanket -R travis-cov",
+    "coverage-local": "mocha --require blanket -R html-cov",
+    "generate-test": "mocha test/__generate.js",
+    "standard": "standard",
+    "test": "npm run standard && npm run unit",
+    "unit": "mocha test/index.js"
+  },
+  "config": {
+    "blanket": {
+      "pattern": [
+        ""
+      ],
+      "data-cover-never": [
+        "node_modules",
+        "test"
+      ]
+    },
+    "travis-cov": {
+      "threshold": 100
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "blanket": "*",
+    "mocha": "*",
+    "standard": "*",
+    "travis-cov": "*"
+  },
+  "peerDependencies": {
+    "typeforce": "^1.0.0"
+  }
+}
