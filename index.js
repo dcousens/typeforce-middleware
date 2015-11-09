@@ -1,7 +1,7 @@
 var typeforce = require('typeforce')
 
 module.exports = function middlewareConstructor (type, strict) {
-  let compiled = typeforce.compile(type)
+  var compiled = typeforce.compile(type)
 
   return function middleware (req, res, next) {
     try {
