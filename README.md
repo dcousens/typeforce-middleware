@@ -15,12 +15,10 @@ var app = express()
 app.post('/comment', bodyParser.json(), typeforce({
 	title: 'String',
 	content: 'String'
-}, true), function (err, req, res, next) {
-	if (err) return res.status(400).end(err.message)
-
-	// ...
-
+}, true), function (req, res) {
 	res.status(200).end()
+}, function (err, req, res, next) {
+	res.status(400).end(err.message)
 })
 ```
 
