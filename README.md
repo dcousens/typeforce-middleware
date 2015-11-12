@@ -15,7 +15,7 @@ var app = express()
 app.post('/comment', bodyParser.json(), typeforce({
 	title: 'String',
 	content: 'String'
-}, true), function (req, res) {
+}), function (req, res) {
 	res.status(200).end()
 }, function (err, req, res, next) {
 	res.status(400).end(err.message)
