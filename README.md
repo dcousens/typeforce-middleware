@@ -4,6 +4,9 @@
 [![Version](http://img.shields.io/npm/v/typeforce-middleware.svg)](https://www.npmjs.org/package/typeforce-middleware)
 
 
+Typeforce applied as a connect middleware.
+Strictness is enabled by default.
+
 ## Examples
 
 ``` javascript
