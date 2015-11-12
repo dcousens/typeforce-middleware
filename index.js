@@ -1,6 +1,10 @@
 var typeforce = require('typeforce')
 
 module.exports = function middlewareConstructor (type, strict) {
+  if (strict === undefined) {
+    strict = true
+  }
+
   var compiled = typeforce.compile(type)
 
   return function middleware (req, res, next) {
