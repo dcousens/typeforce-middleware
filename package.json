@@ -1,6 +1,6 @@
 {
   "name": "typeforce-middleware",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Typeforce, applied as a connect middleware.  Strict by default.",
   "author": "Daniel Cousens",
   "license": "MIT",
