@@ -1,6 +1,7 @@
 var typeforce = require('typeforce')
 
-module.exports = function middlewareConstructor (type, strict) {
+module.exports = function middlewareConstructor (type, strict, key) {
+  key = key || 'body'
   if (strict === undefined) {
     strict = true
   }
@@ -9,7 +10,7 @@ module.exports = function middlewareConstructor (type, strict) {
 
   return function middleware (req, res, next) {
     try {
-      typeforce(compiled, req.body, strict)
+      typeforce(compiled, req[key], strict)
       next()
     } catch (e) {
       next(e)
