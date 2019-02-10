@@ -26,4 +26,3 @@ app.post('/comment', bodyParser.json(), typeforce({
 ```
 
 ## LICENSE [MIT](LICENSE)
-
