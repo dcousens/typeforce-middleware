@@ -16,16 +16,16 @@ const typeforceM = require('typeforce-middleware')
 const app = express()
 
 app.post('/comment', bodyParser.json(), typeforceM({
-	title: 'String',
-	content: 'String'
+  title: 'String',
+  content: 'String'
 }), (req, res) => {
-	// ...
+  // ...
 
 // optional: errors are propagated as `err` in fall-through
 }, (err, req, res, next) => {
-	// ...
+  // ...
 
-	res.status(400).end(err.message)
+  res.status(400).end(err.message)
 })
 
 // ...
@@ -33,12 +33,12 @@ const typeforce = require('typeforce')
 
 // enforces an `:id` string of length:8
 app.get('/comment/:id', typeforceM({
-	id: typeforce.StringN(8)
+  id: typeforce.StringN(8)
 }, true, 'params'), (req, res) => {
-	// ...
-	assert(req.params.id.length === 8)
+  // ...
+  assert(req.params.id.length === 8)
 
-	// ...
+  // ...
 })
 ```
 
