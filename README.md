@@ -2,7 +2,7 @@
 [![build status](https://secure.travis-ci.org/dcousens/typeforce-middleware.png)](http://travis-ci.org/dcousens/typeforce-middleware)
 [![Version](http://img.shields.io/npm/v/typeforce-middleware.svg)](https://www.npmjs.org/package/typeforce-middleware)
 
-Typeforce applied as a connect middleware.
+Typeforce as a connect middleware.
 
 **WARNING:** Typeforce strict flag is enabled by default.
 
